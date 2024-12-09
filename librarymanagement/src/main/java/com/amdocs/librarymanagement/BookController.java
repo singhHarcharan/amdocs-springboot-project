@@ -36,14 +36,12 @@ public class BookController {
         this.bookService = bookService;
     }
 
+    @GetMapping
     public List<Book> getBooks() {
         return bookService.getAllBooks();
     }
 
-    @GetMapping("path")
-    public List<Book> getbBooks() {
-        return bookService.getAllBooks();
-    }
+    
     
     @GetMapping("/{id}")
     // @PathVariable -> it means we are giving ID in URL.
