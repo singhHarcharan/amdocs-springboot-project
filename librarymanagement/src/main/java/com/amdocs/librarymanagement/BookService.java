@@ -16,11 +16,30 @@ public class BookService {
     }
 
     public List<Book> getAllBooks() {
-        return bookRespository.findAll();       // SELECT Query of SQL to fetch all books from database.
+        return bookRespository.findAll();           // SELECT Query of SQL to fetch all books from database.
     }
 
     public Optional<Book> getBookById(Long id) {
         // SELECT * FROM Books WHERE id=?
         return bookRespository.findById(id);       // SELECT Query of SQL to fetch book (of id) from database.
+    }
+
+    public Book getBookById(Book book) {
+        return bookRespository.save(book);          // INSERT Query
+    }
+
+    public void deleteBook(Long id) {
+        bookRespository.deleteById(id);             // DELETE Query
+    }
+
+    public Book updateBook(Long id, Book bookDetails) {
+        Book book = bookRespository.findById(id).orElseThrow(() -> new RuntimeException("Book not found"));
+
+        // Update Values using Getter and Setter
+        book.setTitle(bookDetails.getTitle());
+        book.setAuthor(bookDetails.getAuthor());
+        book.setQuantity(bookDetails.getQuantity());
+
+        return bookRespository.save(book);          // Save changes in database permanently
     }
 }
