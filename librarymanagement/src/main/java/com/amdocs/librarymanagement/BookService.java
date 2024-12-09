@@ -1,9 +1,14 @@
 package com.amdocs.librarymanagement;
 
 import java.util.Optional;
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+// MVC Architecture
+// https://www.javatpoint.com/mvc-architecture-in-java
+// 
 
 @Service            // Service Layer is used to write logic for Business or to use preDefined functions of DOW Class
 public class BookService {
