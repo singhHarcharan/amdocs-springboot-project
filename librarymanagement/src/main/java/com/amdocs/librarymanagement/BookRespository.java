@@ -12,8 +12,10 @@ import org.springframework.stereotype.Repository;
 // Simple preDefined methods can be used.
 
 // JpaRepository<Book, Long>    -> tells what kinds of values we are going to pass
-
 @Repository     
 public interface BookRespository extends JpaRepository<Book, Long> {
     
 }
+
+
+// testing develop branch
