@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-LibrarymanagementApplication<librarymanagement>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.amdocs.librarymanagement.LibrarymanagementApplication",
+            "projectName": "librarymanagement",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}
