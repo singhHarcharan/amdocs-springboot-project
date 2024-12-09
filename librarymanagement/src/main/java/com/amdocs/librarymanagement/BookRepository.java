@@ -13,7 +13,7 @@ import org.springframework.stereotype.Repository;
 
 // JpaRepository<Book, Long>    -> tells what kinds of values we are going to pass
 @Repository     
-public interface BookRespository extends JpaRepository<Book, Long> {
+public interface BookRepository extends JpaRepository<Book, Long> {
     
 }
 
